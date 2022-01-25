@@ -24,20 +24,25 @@
   { title: "Patterns", url: "/design-system/patterns" }
 ] %}
 
+{% set guidanceByTopic = [
+  { title: "Accessibility", url: "/guidance-by-topic/accessibility/" },
+  { title: "URLs", url: "/guidance-by-topic/URLs/" }
+] %}
+
 {% set accessibilityEveryone = [
-  { title: "What all NHS services need to do about accessibility", url: "/accessibility/what-all-NHS-services-need-to-do" },
-  { title: "How to make digital services accessible", url: "/accessibility/how-to-make-digital-services-accessible" },
-  { title: "Getting started with accessibility", url: "/accessibility/getting-started" },
-  { title: "Download accessibility posters", url: "/accessibility/download-accessibility-posters" }
+  { title: "What all NHS services need to do about accessibility", url: "/guidance-by-topic/accessibility/what-all-NHS-services-need-to-do" },
+  { title: "How to make digital services accessible", url: "/guidance-by-topic/accessibility/how-to-make-digital-services-accessible" },
+  { title: "Getting started with accessibility", url: "/guidance-by-topic/accessibility/getting-started" },
+  { title: "Download accessibility posters", url: "/guidance-by-topic/accessibility/download-accessibility-posters" }
 ] %}
 
 {% set accessibilityActivities = [
-  { title: "Product and delivery", url: "/accessibility/product-and-delivery" },
-  { title: "User research", url: "/accessibility/user-research" },
-  { title: "Content", url: "/accessibility/content" },
-  { title: "Design", url: "/accessibility/design" },
-  { title: "Development", url: "/accessibility/development" },
-  { title: "Testing", url: "/accessibility/testing" }
+  { title: "Product and delivery", url: "/guidance-by-topic/accessibility/product-and-delivery" },
+  { title: "User research", url: "/guidance-by-topic/accessibility/user-research" },
+  { title: "Content", url: "/guidance-by-topic/accessibility/content" },
+  { title: "Design", url: "/guidance-by-topic/accessibility/design" },
+  { title: "Development", url: "/guidance-by-topic/accessibility/development" },
+  { title: "Testing", url: "/guidance-by-topic/accessibility/testing" }
 ] %}
 
 {% set content = [
@@ -246,7 +251,20 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == "Accessibility" %}
+  {%- if pageSection == "Guidance by topic" and subSection != "Accessibility" %}
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in guidanceByTopic %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if subSection == "Accessibility" %}
+    {{ backLink({
+      "href": "/guidance-by-topic",
+      "text": "Guidance by topic",
+      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
+    }) }}
     <h2 class="app-side-nav__heading">Everyone needs to know</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in accessibilityEveryone %}

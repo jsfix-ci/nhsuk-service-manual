@@ -1,0 +1,24 @@
+{% set pageTitle = "URLs" %}
+{% set pageDescription = "How URLs are used on the NHS website, their formatting requirements and why short URLs are sometimes created for promotional purposes." %}
+{% set pageSection = "Guidance by topic" %}
+{% set subSection = "URLs" %}
+{% set theme = "Guidance by topic" %}
+{% set hideContact = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "guidance-by-topic/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <p>The <a href="http://nhs.uk/">NHS website</a> URLs are designed to be naturally user and SEO (search engine optimisation) friendly, and to follow a consistent, predictable, format. These guidelines set out how URLs should be constructed, and our approach to setting up additional URLs for marketing purposes.</p>
+  
+  <p>This guidance applies to the <a href="http://nhs.uk/">NHS website</a> and its sub-domains. Separate standards and guidance apply to the wider use of the nhs.uk domain, for example by Public Health England.</p>
+
+  <div class="app-index-navigation app-u-hide-desktop">
+    {% include "includes/_side-nav.njk" %}
+  </div>
+
+{% endblock %}
