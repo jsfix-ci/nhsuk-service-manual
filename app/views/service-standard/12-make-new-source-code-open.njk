@@ -1,15 +1,13 @@
 {% set pageTitle = "12. Make new source code open" %}
-{% set pageSection = "NHS standards and technical policy" %}
-{% set subSection = "NHS service standard" %}
+{% set pageSection = "NHS service standard" %}
 {% set pageDescription = "Make all new source code open and reusable, and publish it under appropriate licences." %}
-{% set beta = true %}
 {% set dateUpdated = "December 2019" %}
 {% set backlog_issue_id = "355" %}
 
 {% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include "standards-and-technical-policy/service-standard-points/_breadcrumb.njk" %}
+  {% include "service-standard/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -50,9 +48,9 @@
 {% block afterContact %}
 
     {{ pagination({
-    "previousUrl": "/standards-and-technical-policy/service-standard-points/11-choose-the-right-tools-and-technology",
+    "previousUrl": "/service-standard/11-choose-the-right-tools-and-technology",
     "previousPage": "Point 11",
-    "nextUrl": "/standards-and-technical-policy/service-standard-points/13-use-and-contribute-to-open-standards-common-components-and-patterns",
+    "nextUrl": "/service-standard/13-use-and-contribute-to-open-standards-common-components-and-patterns",
     "nextPage": "Point 13"
   }) }}
 

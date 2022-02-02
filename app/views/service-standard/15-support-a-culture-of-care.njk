@@ -1,15 +1,13 @@
 {% set pageTitle = "15. Support a culture of care" %}
-{% set pageSection = "NHS standards and technical policy" %}
-{% set subSection = "NHS service standard" %}
+{% set pageSection = "NHS service standard" %}
 {% set pageDescription = "Caring is the core business of the NHS. NHS services should provide a positive experience of care or help NHS staff provide a caring service." %}
-{% set beta = true %}
 {% set dateUpdated = "July 2021" %}
 {% set backlog_issue_id = "358" %}
 
 {% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include "standards-and-technical-policy/service-standard-points/_breadcrumb.njk" %}
+  {% include "service-standard/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -42,10 +40,10 @@
   </ul>
   <p>See also service standard points:</p>
   <ul>
-    <li><a href="/standards-and-technical-policy/service-standard-points/4-make-the-service-simple-to-use">4. Make the service simple to use</a></li>
-    <li><a href="/standards-and-technical-policy/service-standard-points/5-make-sure-everyone-can-use-the-service">5. Make sure everyone can use the service</a></li>
-    <li><a href="/standards-and-technical-policy/service-standard-points/9-respect-and-protect-users-confidentiality-and-privacy">9. Respect and protect users' confidentiality and privacy</a></li>
-    <li><a href="/standards-and-technical-policy/service-standard-points/16-make-your-service-clinically-safe">16. Make your service clinically safe</a></li>
+    <li><a href="/service-standard/4-make-the-service-simple-to-use">4. Make the service simple to use</a></li>
+    <li><a href="/service-standard/5-make-sure-everyone-can-use-the-service">5. Make sure everyone can use the service</a></li>
+    <li><a href="/service-standard/9-respect-and-protect-users-confidentiality-and-privacy">9. Respect and protect users' confidentiality and privacy</a></li>
+    <li><a href="/service-standard/16-make-your-service-clinically-safe">16. Make your service clinically safe</a></li>
 
   </ul>
 
@@ -64,9 +62,9 @@
 {% block afterContact %}
 
  {{ pagination({
-    "previousUrl": "/standards-and-technical-policy/service-standard-points/14-operate-a-reliable-service",
+    "previousUrl": "/service-standard/14-operate-a-reliable-service",
     "previousPage": "Point 14",
-    "nextUrl": "/standards-and-technical-policy/service-standard-points/16-make-your-service-clinically-safe",
+    "nextUrl": "/service-standard/16-make-your-service-clinically-safe",
     "nextPage": "Point 16"
   }) }}
 

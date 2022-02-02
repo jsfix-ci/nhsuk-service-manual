@@ -1,15 +1,13 @@
 {% set pageTitle = "1. Understand users and their needs in the context of health and care" %}
-{% set pageSection = "NHS standards and technical policy" %}
-{% set subSection = "NHS service standard" %}
+{% set pageSection = "NHS service standard" %}
 {% set pageDescription = "Take time to understand your users' clinical, practical and emotional needs - and their abilities - and the problem you're trying to solve for them." %}
-{% set beta = true %}
 {% set dateUpdated = "January 2022" %}
 {% set backlog_issue_id = "335" %}
 
 {% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include "standards-and-technical-policy/service-standard-points/_breadcrumb.njk" %}
+  {% include "service-standard/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -65,7 +63,7 @@
 {% block afterContact %}
 
 {{ pagination({
-    "nextUrl": "/standards-and-technical-policy/service-standard-points/2-and-3-work-towards-solving-a-whole-problem-and-provide-a-joined-up-experience",
+    "nextUrl": "/service-standard/2-and-3-work-towards-solving-a-whole-problem-and-provide-a-joined-up-experience",
     "nextPage": "Points 2 and 3"
   }) }}
 

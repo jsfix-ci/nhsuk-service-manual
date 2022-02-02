@@ -1,15 +1,13 @@
 {% set pageTitle = "10. Define what success looks like and be open about how your service is performing" %}
-{% set pageSection = "NHS standards and technical policy" %}
-{% set subSection = "NHS service standard" %}
+{% set pageSection = "NHS service standard" %}
 {% set pageDescription = "Work out how your service helps improve health and well being, people's experience of health and care, and the efficiency of the health service and how you will know that you're succeeding." %}
-{% set beta = true %}
 {% set dateUpdated = "December 2019" %}
 {% set backlog_issue_id = "344" %}
 
 {% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include "standards-and-technical-policy/service-standard-points/_breadcrumb.njk" %}
+  {% include "service-standard/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -55,9 +53,9 @@
 {% block afterContact %}
 
  {{ pagination({
-    "previousUrl": "/standards-and-technical-policy/service-standard-points/9-respect-and-protect-users-confidentiality-and-privacy",
+    "previousUrl": "/service-standard/9-respect-and-protect-users-confidentiality-and-privacy",
     "previousPage": "Point 9",
-    "nextUrl": "/standards-and-technical-policy/service-standard-points/11-choose-the-right-tools-and-technology",
+    "nextUrl": "/service-standard/11-choose-the-right-tools-and-technology",
     "nextPage": "Point 11"
   }) }}
 
